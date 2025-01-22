@@ -75,7 +75,7 @@ const InputContainer = ({
           </SelectContent>
         </Select>
       ) : variant === "text-area" ? (
-        <Textarea placeholder={placeholder} className="border border-[#00000033] min-h-[200px] rounded-[8px]"/>
+        <Textarea placeholder={placeholder} className="border border-[#00000033] min-h-[100px] rounded-[8px]"/>
       ) : variant === "password" ? (
         <div className="relative">
           <Input

@@ -17,7 +17,7 @@ const OTP = () => {
           <ArrowLeft />
         </div>
       </div>
-      <div className="px-[5%] py-[10%]">
+      <div className="p-6">
         <div className="flex flex-col gap-8">
           <h1 className="text-[24px] font-[600] text-center">
             Welcome to Veriqpro

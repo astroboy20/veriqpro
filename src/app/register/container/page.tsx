@@ -1,9 +1,11 @@
-import { Success } from "@/app/success/container/success";
+import { Register } from "./register";
+
+
 
 export default function Page() {
   return (
     <>
-      <Success />
+      <Register />
     </>
   );
 }
