@@ -1,6 +1,6 @@
 import { GenerateCode } from "../container/generate-code";
 
-export default function Dashboard() {
+export default function Page() {
   return (
     <>
       <GenerateCode />

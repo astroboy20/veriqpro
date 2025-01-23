@@ -1,9 +1,9 @@
-// import { DashboardHome } from "./container/dashboard-home";
+import { ViewCode } from "../container/view-code";
 
-export default function Dashboard(){
-    return(
-        <>
-        {/* <DashboardHome/> */}
-        </>
-    )
+export default function Page() {
+  return (
+    <>
+      <ViewCode />
+    </>
+  );
 }

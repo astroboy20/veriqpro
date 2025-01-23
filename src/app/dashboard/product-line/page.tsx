@@ -1,9 +1,11 @@
-// import { DashboardHome } from "./container/dashboard-home";
+import ProductLine from "../container/product-line";
 
-export default function Dashboard(){
+
+
+export default function Page(){
     return(
         <>
-        {/* <DashboardHome/> */}
+        <ProductLine/>
         </>
     )
 }

@@ -1,9 +1,9 @@
+import { Analytics } from "../container/analytics";
 
-
-export default function Dashboard(){
-    return(
-        <>
-        {/* <DashboardHome/> */}
-        </>
-    )
+export default function Page() {
+  return (
+    <>
+      <Analytics />
+    </>
+  );
 }
