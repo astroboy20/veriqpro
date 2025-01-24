@@ -38,6 +38,8 @@ const Success = () => {
       </div>
     </div>
   );
+
+
 };
 
 export { Success };

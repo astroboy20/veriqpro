@@ -1,4 +1,5 @@
-import { GenerateCode } from "../container/generate-code";
+import { GenerateCode } from "../container/generate-code/generate-code";
+
 
 export default function Page() {
   return (
