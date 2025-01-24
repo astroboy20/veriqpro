@@ -1,4 +1,4 @@
-import { ViewCode } from "../container/view-code";
+import { ViewCode } from "../container/view-code/view-code";
 
 export default function Page() {
   return (
