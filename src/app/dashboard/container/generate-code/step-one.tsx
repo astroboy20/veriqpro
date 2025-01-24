@@ -30,8 +30,13 @@ const StepOne = ({
         ) : (
           <div className="p-[50px] flex flex-col gap-3 justify-center w-full">
             <p className="text-[14px] text-[#00000066] text-center">
-              <span className="underline font-[600]">click here </span> to
-              generate code
+              <span
+                onClick={handleGenerateClick}
+                className="underline font-[600]"
+              >
+                click here{" "}
+              </span>{" "}
+              to generate code
             </p>
             <div className="m-auto">
               <Button
@@ -66,6 +71,5 @@ const StepOne = ({
     </>
   );
 };
-
 
 export { StepOne };
