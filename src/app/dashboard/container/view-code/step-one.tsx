@@ -56,8 +56,14 @@ const StepOne = ({ products, handleNext }: StepOneProps) => {
           </div>
         ))}
       </div>
+      <div className="flex flex-col gap-1 fixed bottom-10 rounded-[4px] w-[88%] p-3 border border-[#00000033] text-[14px]">
+        <p className="font-[600]">Powered by veriqpro</p>
+        <p className="font-[400]">
+          Generating secure and unique product codes for your brand.
+        </p>
+      </div>
     </>
   );
 };
 
-export default StepOne;
+export { StepOne };

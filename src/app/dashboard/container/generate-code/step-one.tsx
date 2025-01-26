@@ -44,7 +44,7 @@ const StepOne = ({
                 variant={"ghost"}
                 onClick={handleGenerateClick}
               >
-                Genrate
+                Generate
               </Button>
             </div>
           </div>
@@ -61,12 +61,12 @@ const StepOne = ({
           </Button>
         </div>
       ) : (
-        <div className="flex flex-col gap-1 fixed left-1/2 bottom-10 transform -translate-x-1/2 rounded-[4px] w-[88%] m-auto p-3 border border-[#00000033] text-[13px] bg-white shadow-[2px_2px_4px_rgba(0,0,0,0.06)]">
-          <p className="font-[600]">Powered by veriqpro</p>
-          <p className="font-[400]">
-            Generating secure and unique product codes for your brand.
-          </p>
-        </div>
+        <div className="flex flex-col gap-1 fixed bottom-10 rounded-[4px] w-[88%] p-3 border border-[#00000033] text-[14px]">
+        <p className="font-[600]">Powered by veriqpro</p>
+        <p className="font-[400]">
+          Generating secure and unique product codes for your brand.
+        </p>
+      </div>
       )}
     </>
   );

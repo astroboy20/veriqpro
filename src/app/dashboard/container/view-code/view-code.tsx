@@ -3,7 +3,7 @@
 import { ArrowLeft, Menu } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import StepOne from "./step-one";
+import {StepOne} from "./step-one";
 import { StepTwo } from "./step-two";
 
 const products = [
@@ -34,11 +34,11 @@ const ViewCode = () => {
   const router = useRouter();
   const [step, setStep] = useState(1);
   const [selectedProduct, setSelectedProduct] = useState<string>("");
-  const [productNames] = useState(products.map((product) => product.name)); // Extract product names
+  const [productNames] = useState(products.map((product) => product.name)); 
 
   const handleNext = (productName: string) => {
-    setSelectedProduct(productName); // Pass the clicked product's name
-    setStep((prevStep) => prevStep + 1); // Move to StepTwo
+    setSelectedProduct(productName); 
+    setStep((prevStep) => prevStep + 1); 
   };
 
   const handlePrev = () => {
