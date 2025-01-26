@@ -1,37 +1,23 @@
+import React from "react";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import Image from "next/image";
-import React from "react";
-import {MoreIcon } from "@/assets/index"
-const products = [
-  {
-    product_id: 1,
-    name: "Johnnie walker blue label",
-    volume: "750ml",
-    code_generated: 50,
-    src: "/images/walker.svg",
-  },
-  {
-    product_id: 2,
-    name: "Ciroc vodka",
-    volume: "750ml",
-    code_generated: 50,
-    src: "/images/vodka.svg",
-  },
-  {
-    product_id: 3,
-    name: "Malta guniness",
-    volume: "750ml",
-    code_generated: 50,
-    src: "/images/malt.svg",
-  },
-];
+import { MoreIcon } from "@/assets/index";
 
-interface StepOneProps {
-    handleNext:()=>void
+interface Product {
+  product_id: number;
+  name: string;
+  volume: string;
+  code_generated: number;
+  src: string;
 }
 
-const StepOne = ({handleNext}:StepOneProps) => {
+interface StepOneProps {
+  products: Product[];
+  handleNext: (productName: string) => void;
+}
+
+const StepOne = ({ products, handleNext }: StepOneProps) => {
   return (
     <>
       <div className="relative">
@@ -40,28 +26,33 @@ const StepOne = ({handleNext}:StepOneProps) => {
         </span>
         <Input
           className="border border-[#0000001A] rounded-[80px] h-10 text-[14px] text-[#00000080] pl-12"
-          placeholder="search by product name"
+          placeholder="Search by product name"
         />
       </div>
-      <div className="flex flex-col  gap-[18px] mt-8">
+      <div className="flex flex-col gap-[18px] mt-8">
         {products.map((product) => (
-          <div className="flex justify-between items-center border-[0.5px] border-[#0000001A]  rounded-[2px] px-[18px] py-3 shadow-[2px_2px_4px_rgba(0,0,0,0.06)]">
-            <div className="flex items-center gap-4 ">
-              <div>
-                <Image
-                  src={product.src}
-                  width={56}
-                  height={56}
-                  alt={product.name}
-                />
-              </div>
+          <div
+            key={product.product_id}
+            className="flex justify-between items-center border-[0.5px] border-[#0000001A] rounded-[2px] px-[18px] py-3 shadow-[2px_2px_4px_rgba(0,0,0,0.06)]"
+          >
+            <div className="flex items-center gap-4">
+              <Image
+                src={product.src}
+                width={56}
+                height={56}
+                alt={product.name}
+              />
               <div className="flex flex-col gap-[6px] text-[12px] font-[400]">
-                <p className="">{product.name}</p>
-                <p className="">{product.volume}</p>
-                <p className="font-[500]">Code generated: {product.code_generated}</p>
+                <p>{product.name}</p>
+                <p>{product.volume}</p>
+                <p className="font-[500]">
+                  Code generated: {product.code_generated}
+                </p>
               </div>
             </div>
-            <span onClick={handleNext}><MoreIcon/></span>
+            <span onClick={() => handleNext(product.name)}>
+              <MoreIcon />
+            </span>
           </div>
         ))}
       </div>
