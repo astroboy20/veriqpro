@@ -1,4 +1,4 @@
-import ProductLine from "../container/product-line";
+import {ProductLine} from "../container/product-line/product-line";
 
 
 
