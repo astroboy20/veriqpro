@@ -53,7 +53,7 @@ const ViewCode = () => {
     <main className="px-6 py-5">
       <header className="flex justify-between items-center">
         <ArrowLeft className="text-[#292D32]" onClick={handlePrev} />
-        <h1 className="text-[24px] font-[600]">View Generate Code</h1>
+        <h1 className="text-[24px] font-[600]">View Generated Code</h1>
         <Menu className="text-[#292D32]" />
       </header>
 
