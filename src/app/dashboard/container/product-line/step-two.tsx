@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import Image from "next/image"
+import Image from "next/image";
 
 const StepTwo = () => {
   const [productLine, setProductLine] = useState("");
@@ -84,13 +84,18 @@ const StepTwo = () => {
             <DialogContent>
               <DialogHeader>
                 <DialogTitle></DialogTitle>
-                <DialogDescription>
-                  
-                </DialogDescription>
-                <div>
-                    {/* <Image src="/images/cheers.png" width={300} height={300} alt=""/> */}
-                    <p>Product has been successfully added to your product line</p>
-                    {/* <Button></Button> */}
+                <DialogDescription></DialogDescription>
+                <div className="fle flex-col gap-5 items-center justify-center">
+                  <Image
+                    src="/images/cheers.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
+                  <p>
+                    Product has been successfully added to your product line
+                  </p>
+                  {/* <Button></Button> */}
                 </div>
               </DialogHeader>
             </DialogContent>
