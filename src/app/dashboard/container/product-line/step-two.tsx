@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import {
   Dialog,
   DialogContent,
@@ -15,6 +15,12 @@ const StepTwo = () => {
   const [productLine, setProductLine] = useState("");
   const [productType, setProductType] = useState("");
   const [productImage, setProductImage] = useState("");
+  const [selectedFile, setSelectedFile] = useState<string | null>(null);
+
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files ? URL.createObjectURL(e.target.files[0]) : null;
+    selectedFile(file)
+  };
 
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem("productData") || "{}");
@@ -35,7 +41,8 @@ const StepTwo = () => {
   return (
     <section className="flex flex-col gap-6">
       <div className="w-[380px] h-[380px] border border-[#0A2629] rounded-[4px] flex justify-center items-center">
-        <p className="text-[14px] font-[300]">Add or browse product image</p>
+        <label className="text-[14px] font-[300]">Add or browse product image</label>
+        <input type="file"  />
       </div>
       <div className="flex flex-col gap-10">
         <div>
