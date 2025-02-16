@@ -19,7 +19,7 @@ const StepTwo = () => {
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files ? URL.createObjectURL(e.target.files[0]) : null;
-    selectedFile(file)
+    setSelectedFile(file);
   };
 
   useEffect(() => {
@@ -41,8 +41,24 @@ const StepTwo = () => {
   return (
     <section className="flex flex-col gap-6">
       <div className="w-[380px] h-[380px] border border-[#0A2629] rounded-[4px] flex justify-center items-center">
-        <label className="text-[14px] font-[300]">Add or browse product image</label>
-        <input type="file"  />
+        {selectedFile ? (
+          <div>
+            <Image
+              src={selectedFile}
+              width={380}
+              height={380}
+              alt="uploaded image"
+              className=" object-cover"
+            />
+          </div>
+        ) : (
+          <div>
+            <label htmlFor="upload-image" className="text-[14px] font-[300]">
+              Add or browse product image
+            </label>
+            <input type="file" hidden id="upload-image" onChange={handleFileChange}/>
+          </div>
+        )}
       </div>
       <div className="flex flex-col gap-10">
         <div>
