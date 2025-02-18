@@ -48,7 +48,7 @@ const StepTwo = () => {
               width={380}
               height={380}
               alt="uploaded image"
-              className=" object-cover"
+              className="w-[380px] h-[380px] object-contain"
             />
           </div>
         ) : (
@@ -56,7 +56,12 @@ const StepTwo = () => {
             <label htmlFor="upload-image" className="text-[14px] font-[300]">
               Add or browse product image
             </label>
-            <input type="file" hidden id="upload-image" onChange={handleFileChange}/>
+            <input
+              type="file"
+              hidden
+              id="upload-image"
+              onChange={handleFileChange}
+            />
           </div>
         )}
       </div>
