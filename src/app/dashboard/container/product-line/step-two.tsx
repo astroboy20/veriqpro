@@ -31,11 +31,15 @@ const StepTwo = () => {
 
   const handleSave = () => {
     const productData = {
+      selectedFile,
       productLine,
       productType,
       productImage,
     };
-    localStorage.setItem("productData", JSON.stringify(productData));
+
+    if(typeof window !=="undefined"){
+      localStorage.setItem("product-data", JSON.stringify(productData))
+    }
   };
 
   return (
