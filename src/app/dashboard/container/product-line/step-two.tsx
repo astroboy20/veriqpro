@@ -66,6 +66,7 @@ const StepTwo = () => {
               id="upload-image"
               onChange={handleFileChange}
             />
+            
           </div>
         )}
       </div>
