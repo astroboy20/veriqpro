@@ -29,6 +29,7 @@ const StepOne = ({ handleNext }: StepOneProps) => {
               alt="not-found"
             />
           </div>
+
           <div className="flex flex-col gap-2 text-center">
             <h3 className="text-[24px] font-[400]"> Oopss!</h3>
             <p className="text-[18px] font-[400]">
@@ -37,6 +38,7 @@ const StepOne = ({ handleNext }: StepOneProps) => {
             </p>
           </div>
         </div>
+        
         <div className="w-full">
           <Button
             onClick={handleNext}
